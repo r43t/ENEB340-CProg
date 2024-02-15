@@ -1,0 +1,22 @@
+Reta Gela
+University ID: 117198133
+September 7, 2023
+							LAB2.TXT 
+
+1.	a) cd /home
+	b) cd /r374
+	c) cd /
+	d) vi hello.c
+	e) i (puts it into editing mode), after code is written,
+	   press the 'esc' button and enter ":wq" command to save and quit
+	f) chmod 644 hello.c
+	g) gcc hello.c -o hello results in no errors and sucessful compiling
+	h) The permissions on 'hello' is rwxr-xr-x. The owner has read/write
+	   /execute permission and others and group have read/execute 
+	   permission.
+	i) chmod 700 hello
+	   output: rwx------c
+	j) ./hello
+		output: Hello world!
+	k) printenv HOME
+	   output: /home/r374
