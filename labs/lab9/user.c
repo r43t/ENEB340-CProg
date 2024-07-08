@@ -13,8 +13,8 @@ void writeCSV(char* FileName, struct List *head) {
       exit(0);
    }
    while(fp != NULL) {
-      fprintf(fp, "%d,%s,%d,%.2f,%.2f\n", ptr->user.ID, ptr->user.name, ptr->user.age, ptr->user.height, ptr->user.weight);
-      ptr = ptr-> next;
+      fprintf(fp, "%d,%s,%d,%.2f,%.2f\n", ptr->user.ID, ptr->user.name, ptr->User.age, ptr->User.height, ptr->User.weight);
+      ptr = ptr->next;
    }
    fclose(fp);
 }
@@ -39,7 +39,6 @@ struct LIST* readCSV(char* FileName) {
       fscanf(fp, "%d,%s,%d,%.2f,%.2f", &ID, &name, &age, &height, &weight);
       struct LIST u1;
       u1.user.ID = ID;
-      
 
    }
 }
