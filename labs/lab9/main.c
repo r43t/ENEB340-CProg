@@ -8,8 +8,8 @@
 int main (void) 
 {
    char name[MAX];
-   int age;
-   int select;
+   int ID, age, select;
+   float height, weight;
 
    struct List origin[] = {
       {{1, "Olivia",  29,  1.81,  250.62},  NULL, &origin[1]}, 
@@ -32,25 +32,37 @@ int main (void)
       scanf("%d", &select);
       switch (select) {
          case 1:
-            countUsers(origin);
+            printf("Total: %d\n", countUsers(origin));
             break;
          case 2:
-            
+            printf("Enter name of user: ");
+            scanf("%s", name);
+            searchUser(origin, name);
             break;
          case 3:
-
+            sortList(origin);
+            writeCSV("data.CSV", origin);
+            printList(origin);
             break;
          case 4:
-
+            printf("Enter the name, age, height and weight of new user (separate with spaces): ");
+            scanf("%s %d %.2f %.2f", &name, &age, &height, &weight);
+            addUser(origin, name, age, height, weight);
             break;
          case 5:
-
+            printf("Enter an ID to remove: ");
+            scanf("%d", &ID);
+            removeUser(*origin, ID);
             break;
          case 6:
-         
+            printf("Enter an ID to update: ");
+            scanf("%d", &ID);
+            printf("Enter the updated name, age, height and weight: ");
+            scanf("%s %d, %.2f %.2f", &name, &age, &height, &weight);
+            updateUser(origin, ID, name, age, height, weight);
             break;
          case 7:
-         
+            calcAvg(origin, )
             break;
          default:
             printf("Program terminated.");

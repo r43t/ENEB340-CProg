@@ -1,10 +1,9 @@
-#ifndef User
-#define User
-#define MAX 20
+/* Header Function File
+*/
 
 struct User {
   int ID;
-  char name[MAX];
+  char name[20];
   int age;
   float height;
   float weight;
@@ -21,22 +20,20 @@ void writeCSV(char *FileName, struct List *head);
 // Generate linked List from CSV file
 struct LIST* readCSV(char* FileName);
 // Sort User List by Name
-void sortList();
+void sortList(struct List *head);
 // Count number of users 
-int countUsers(struct LIST *start);
+int countUsers(struct List *head);
 // Search or a specific user 
-void searchUser();
+void searchUser(struct List *head, char name[20]);
 // Remove a user
-void removeUser();
+void removeUser(struct List **head, int ID);
 // Update a user's information
-void update();
+void updateUser(struct List *head, int ID, char name[], int age, float height, float weight);
 // Add a new user
-void addUser();
+void addUser(struct List *head, char name[20], int age, float height, float weight);
 // Calculate weight and height averages
-void calcUser();
+void calcAvg(struct List *head, float avgs[2]);
 // Print contents of a single user
-void printUser();
+void printUser(struct User user);
 // Print the entire list of users
-void printList();
-
-#endif
+void printList(struct List *head);
