@@ -88,9 +88,9 @@ void sortList(struct List *head) {
    } while(swap == 1);
 }
 // Count number of users 
-int countUsers(struct LIST *start) {
+int countUsers(struct List *head) {
    int count = 0;
-   struct LIST *ptr = start;
+   struct List *ptr = head;
    while (ptr != NULL){
       count++;
       ptr = ptr-> next;
@@ -99,7 +99,7 @@ int countUsers(struct LIST *start) {
 }
 // Search for a specific user 
 void searchUser(struct List *head, char name[20]) {
-   struct list *ptr = head;
+   struct List *ptr = head;
    while(ptr != NULL) {
       if(strcmp(ptr->user.name, name) == 0) {
          printUser(ptr->user);

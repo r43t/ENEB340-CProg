@@ -58,11 +58,11 @@ int main (void)
             printf("Enter an ID to update: ");
             scanf("%d", &ID);
             printf("Enter the updated name, age, height and weight: ");
-            scanf("%s %d, %.2f %.2f", &name, &age, &height, &weight);
+            scanf("%s %d  %.2f %.2f", &name, &age, &height, &weight);
             updateUser(origin, ID, name, age, height, weight);
             break;
          case 7:
-            calcAvg(origin, )
+            calcAvg(origin, avg);
             break;
          default:
             printf("Program terminated.");
