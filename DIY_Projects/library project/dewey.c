@@ -11,14 +11,14 @@
 typedef struct {
    char name[30];
    int founded;
-   char *genres;
+   Genre *genres;
    int size;
 } Library;
 
 typedef struct {
    char name[20];
    char section[20];
-   char *books;
+   Book *books;
    int capacity;
 } Genre;
 
